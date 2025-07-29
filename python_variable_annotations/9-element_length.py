@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """
+This script defines a function
 """
 
-from typing import Iterable, Sequence, Tuple, List
-
-
-def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
-    """ Returns a list of tuples with each sequence and its length."""
-    return [(i, len(i)) for i in lst]
+def add(a: float, b: float) -> float:
+    '''Adds two floating-point numbers.
+    '''
+    return a + b
