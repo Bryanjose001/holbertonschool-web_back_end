@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""
-This script defines a function
-"""
+"""just a script that defines a function"""
 
-def add(a: float, b: float) -> float:
-    '''Adds two floating-point numbers.
-    '''
-    return a + b
+from typing import Iterable, Sequence, List, Tuple
+
+
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
+    """You get brownie points if you get that reference"""
+    return [(i, len(i)) for i in lst]
