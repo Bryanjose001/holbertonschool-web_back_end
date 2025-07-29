@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 """
-    Type annotated function (element_length) that takes an iterable of sequences,
-    and returns a list of tuples, each containing the sequence and its length.
 """
 
 from typing import Iterable, Sequence, Tuple, List
