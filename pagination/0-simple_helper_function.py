@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Helper function to calculate index range for pagination."""
-from typing import Tuple
 
 
 def index_range(page: int, page_size, int) -> tuple:
