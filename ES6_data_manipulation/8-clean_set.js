@@ -1,10 +1,9 @@
-// 8-clean_set.js
-function cleanSet(set, startString) {
-  const result = [...set]
+export default function cleanSet(set, startString) {
+  if (typeof startString !== 'string' || startString.length === 0) {
+    return '';
+  }
+  return Array.from(set)
     .filter((item) => item.startsWith(startString))
-    .map(item => item.slice(startString.length))
+    .map((item) => item.slice(startString.length))
     .join('-');
-  return result;
 }
-
-export default cleanSet;
