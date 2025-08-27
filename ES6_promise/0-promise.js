@@ -1,4 +1,5 @@
-function getReponsefromAPI(){
+export function getReponsefromAPI(){
     return new Promise
-    resolve();
+    resolve("Success");
+    
 }
