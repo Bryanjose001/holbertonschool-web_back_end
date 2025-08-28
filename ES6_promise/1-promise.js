@@ -2,7 +2,7 @@
     return new Promise((resolve, reject) =>{
         if (true){
             resolve({status: 200, body: 'Success'});
-        } else(false){
+        } else{
             reject(Error('The fake API is not working currently'));
         }
     });
