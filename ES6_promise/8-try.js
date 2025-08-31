@@ -5,6 +5,5 @@ export default function divideFunction(numerator, denominator) {
         } else {
             resolve(numerator / denominator);
         }
-}
-    );
+    });
 }
