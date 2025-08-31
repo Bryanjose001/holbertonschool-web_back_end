@@ -5,9 +5,7 @@ export default function handleProfileSignup(firstName, lastName, fileName)
 {
     const thepromise1 = signupuser
     const thepromise2 = uploadphoto
-    return Promise.allSettled([
-        signupuser(firstName, lastName),
-        uploadphoto(fileName),
+    return Promise.allSettled([thepromise1, thepromise2
     ]).then((results) => {
         return results.map((result) => ({
             status: result.status, value: result.status === 'fulfilled' ? result.value : `Error: ${result.reason.message}`,
