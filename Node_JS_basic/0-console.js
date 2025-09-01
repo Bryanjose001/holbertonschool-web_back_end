@@ -1,4 +1,4 @@
 function displayMessage() {
   console.log(message);
 }
-export default displayMessage;
+module.exports = displayMessage;
