@@ -30,6 +30,7 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+            """functions that uses assert for page maniging"""
             assert type(page) is int and page > 0 
             assert type(page_size) is int and page_size > 0
             data = Server.dataset(self)
