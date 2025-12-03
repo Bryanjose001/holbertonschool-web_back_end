@@ -2,7 +2,7 @@
 """function that returns a list of pagination parameters"""
 import csv
 import math
-from typing import List, Tuple, Dictionary
+from typing import List, Tuple, Dict
 
 def index_range(page: int, page_size: int) -> Tuple:
     """function that has two interger arguments and returns a parameter"""
