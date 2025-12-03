@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 """function that returns a list of pagination parameters"""
-from typing import Tuple
 import csv
 import math
-from typing import List
+from typing import List, Tuple
 
 
 def index_range(page: int, page_size: int) -> Tuple:
     """function that has two interger arguments and returns a parameter"""
     return (((page * page_size) - page_size), (page * page_size))
 
+
 class Server:
-    """Server class to paginate a database of popular baby names.
-    """
+    """Server class to paginate a database of popular baby names. """
+
     DATA_FILE = "Popular_Baby_Names.csv"
 
     def __init__(self):
@@ -29,9 +29,9 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-            """functions that uses assert for page maniging"""
-            assert type(page) is int and page > 0 
-            assert type(page_size) is int and page_size > 0
-            data = Server.dataset(self)
-            memoria = index_range(page, page_size)
-            return data[memoria(0):memoria(1)]
+        """functions that uses assert for page maniging"""
+        assert type(page) is int and page > 0
+        assert type(page_size) is int and page_size > 0
+        data = Server.dataset(self)
+        memoria = index_range(page, page_size)
+        return data[memoria[0]:memoria[1]]
