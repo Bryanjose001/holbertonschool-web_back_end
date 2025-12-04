@@ -5,7 +5,7 @@ Deletion-resilient hypermedia pagination
 
 import csv
 import math
-from typing import List
+from typing import List,Dict
 
 
 class Server:
@@ -40,4 +40,13 @@ class Server:
         return self.__indexed_dataset
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
+        '''function thatg gets hyper like KSI'''
         
+
+        my_other_dict = {
+            'index':,
+            'data':,
+            'next_index':,
+            'page_size':
+        }
+        return my_other_dict
