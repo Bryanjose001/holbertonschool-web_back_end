@@ -37,6 +37,7 @@ class Server:
         return data[memoria[0]:memoria[1]]
     def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
         '''Returns a dicctionary in hypermedia pagination style'''
+
         data = Server.dataset(self)
         more_pages = len(data) // page_size
         next_page = None
@@ -51,7 +52,7 @@ class Server:
         total_pages = math.ceil(len(data) / page_size)
 
         my_dict = {
-            'page_size': page_size, 
+            'page_size': page_size,
             'page': page,
             'data': data,
             'next_page': next_page,
