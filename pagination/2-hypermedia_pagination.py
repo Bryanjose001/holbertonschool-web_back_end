@@ -51,11 +51,11 @@ class Server:
         total_pages = math.ceil(len(data) / page_size)
 
         my_dict = {
-            'page_size':page_size, 
+            'page_size': page_size, 
             'page': page,
-            'data':data,
-            'next_page':next_page,
-            'prev_page':prev_page,
-            'total_pages':total_pages
+            'data': data,
+            'next_page': next_page,
+            'prev_page': prev_page,
+            'total_pages': total_pages
         }
         return my_dict
