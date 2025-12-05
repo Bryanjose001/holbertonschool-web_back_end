@@ -41,12 +41,22 @@ class Server:
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
         '''function thatg gets hyper like KSI'''
-        
-
+        more_data = self.indexed_dataset()
+        assert index < len(more_data) and index >= 0
+        data = []
+        next_index = index + page_size
+        index1 = index
+        for index1 in range(page_size):
+            if not more_data.get(index1):
+                next_index += 1
+                index1 += 1
+            data.append(more_data.get(index1))
+            index1 += 1
         my_other_dict = {
-            'index':,
-            'data':,
-            'next_index':,
-            'page_size':
+            'index': index ,
+            'next_index': next_index,
+            'page_size': page_size,
+            'data':data
+
         }
         return my_other_dict
