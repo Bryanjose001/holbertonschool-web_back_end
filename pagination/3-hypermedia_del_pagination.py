@@ -5,7 +5,7 @@ Deletion-resilient hypermedia pagination
 
 import csv
 import math
-from typing import List,Dict
+from typing import List, Dict
 
 
 class Server:
@@ -53,10 +53,10 @@ class Server:
             data.append(more_data.get(index1))
             index1 += 1
         my_other_dict = {
-            'index': index ,
+            'index': index,
             'next_index': next_index,
             'page_size': page_size,
-            'data':data
+            'data': data
 
         }
         return my_other_dict
