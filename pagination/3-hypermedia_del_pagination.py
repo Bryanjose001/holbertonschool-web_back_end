@@ -46,7 +46,7 @@ class Server:
         data = []
         next_index = index + page_size
         index1 = index
-        for index1 in range(page_size):
+        for _index1 in range(page_size):
             if not more_data.get(index1):
                 next_index += 1
                 index1 += 1
