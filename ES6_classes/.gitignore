@@ -2,4 +2,5 @@ ES6_classes
 node_modules
 @babel
 ES6_basic
+.bin
 
