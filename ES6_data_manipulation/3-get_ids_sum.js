@@ -1,4 +1,3 @@
 export default function getStudentIdsSum(myStudents){
-    let myStudents = myarray
-    return myStudents.reduce((obj) => obj.id)
+    return myStudents.reduce((suma,obj) => suma +  obj.id, 0);
 }
