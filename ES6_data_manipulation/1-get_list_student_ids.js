@@ -1,8 +1,8 @@
 export default function getListStudentIds(){
-    let studentIds = new Map();
-    studentIds.set(id,1);
-    studentIds.set(id,2);
-    studentIds.set(id,5);
-    let myarray = [studentIds]
-    return my_array
+    let obj = {id:1}
+    let obj1 = {id:2}
+    let obj2 = {id:5}
+    let studentIds = [obj,obj1,obj2];
+    let myMap = new Map(studentIds);
+    return myMap
 }
