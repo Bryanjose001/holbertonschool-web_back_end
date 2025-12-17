@@ -3,5 +3,5 @@ export default function getListStudentIds(id_arrays){
         return[];
     }
 
-    return 
+    return id_arrays.map(obj)
 }
