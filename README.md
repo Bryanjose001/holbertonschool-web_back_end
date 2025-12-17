@@ -28,7 +28,5 @@ git clone https://github.com/Bryanjose001/holbertonschool-web_back_end.git
 
 **Bryan J. Camacho Santiago**
 
-## License
 
-Educational purposes only.
 
