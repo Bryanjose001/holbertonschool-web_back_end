@@ -1,9 +1,6 @@
-export default function createInt8TypedArray(lenght,position,value){
-    let buffer = new ArrayBuffer(8);
+export default function createInt8TypedArray(length,position,value){
+    let buffer = new ArrayBuffer();
     let view = new DataView(buffer);
-    lenght = 10
-    position = 2
-    value = 89
-    DataView.setInt8(position) = value
+    view.setInt8(2,89);
     return 
 }
