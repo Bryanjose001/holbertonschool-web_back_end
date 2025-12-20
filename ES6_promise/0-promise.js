@@ -1,3 +1,3 @@
-return function getResponseFromAPI(){
-    let promise = new promise
+export default function getResponseFromAPI(){
+    return Promise
 }
