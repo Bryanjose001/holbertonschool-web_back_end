@@ -1,3 +1,3 @@
-export default function displayMessage(){
-    
+function displayMessage(STDOUT){
+    displayMessage()
 }
