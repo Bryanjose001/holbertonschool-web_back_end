@@ -1,15 +1,8 @@
  export default function cleanSet(set, startString) {
-  let result = [];
-
-  if (!startString || typeof startString !== 'string') {
-    return '';
-  }
-
-  for (let value of set) {
-    if (typeof value === 'string' && value.startsWith(startString)) {
-      result.push(value.slice(startString.length));
+let array1 = []
+    for(let word of set){
+      if(word.startsWith(startString))
+        array1.push(word.slice(startString.length))
     }
-  }
-
-  return result.join('-');
+  return array1.join('-');
 }
