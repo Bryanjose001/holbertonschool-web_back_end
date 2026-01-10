@@ -1,15 +1,20 @@
+let fs = require('fs');
+
 function countStudents(){
-    let fs = require('fs');
     let databasecsv1 = './database.csv'
 
     try{
-        let data = fs.readFileSync(databasecsv1, 'utf8')
+        let database = fs.readFileSync(databasecsv1, 'utf-8')
 
-        console.log('Number of students:')
-        console.log(data)
+        let lines = database.trim().split('\n')
+        
+        let numerofStudents = lines.length - 1
+
+        console.log(`Number of students: ${numerofStudents}`)
+        
     } catch(error1){
-    console.error('Cannot load the database', error.message)
+    throw new Error('Cannot load the database');
     }
-
-    console.log('This line executes after the file has been completely read.')
 }
+
+module.exports = countStudents;
