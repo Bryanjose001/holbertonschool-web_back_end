@@ -1,14 +1,14 @@
 let fs = require('fs');
-
-function countStudents() {
-  let databasecsv1 = './database.csv';
-
+function countStudents(path) {
+  if (!path) {
+    throw new Error('Cannot load the database');
+  }
   try {
-    let database = fs.readFileSync(databasecsv1, 'utf-8');
-    let lines = database.trim().split('\n');
-    let numberOfStudents = lines.length - 1;
-    console.log(`Number of students: ${numberOfStudents}`);
-    let students = lines.slice(1);
+    let database = fs.readFileSync(path, 'utf-8');
+    let lines = database.split('\n');
+    lines.shift();
+    let students = lines.filter((line) => line.trim() !== '');
+    console.log(`Number of students: ${students.length}`);
     let fields = {};
     students.forEach((line) => {
       let parts = line.split(',');
@@ -23,8 +23,8 @@ function countStudents() {
     for (let field in fields) {
       console.log(`Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`);
     }
-  } catch(error) {
-    throw new Error('Cannot load the database')
+  } catch (error) {
+    throw new Error('Cannot load the database');
   }
 }
 
