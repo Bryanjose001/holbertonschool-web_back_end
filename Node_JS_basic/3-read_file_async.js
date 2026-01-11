@@ -1,6 +1,6 @@
 const fs = require('node:fs/promises');
 
-async function countStudents(path) { 
+async function countStudents(path) {
   try {
     const database = await fs.readFile(path, 'utf-8');
 
