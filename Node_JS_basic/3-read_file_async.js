@@ -9,7 +9,7 @@ async function countStudents(path) {
 
     const students = lines.filter((line) => line.trim() !== '');
 
-    console.log(`Number of students: ${students.length}`);
+    let output = `Number of students: ${students.length}\n`;
 
     const fields = {};
 
@@ -27,11 +27,11 @@ async function countStudents(path) {
 
     for (const field in fields) {
       if (Object.prototype.hasOwnProperty.call(fields, field)) {
-        console.log(
-          `Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`,
-        );
+        output += `Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}\n`;
       }
     }
+
+    return output.trim();
   } catch (error) {
     throw new Error('Cannot load the database');
   }
