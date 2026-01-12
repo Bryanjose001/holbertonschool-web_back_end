@@ -3,7 +3,7 @@ const http = require('http');
 const hostname = '127.0.0.1';
 const port = 1245;
 const countStudents = require('./3-read_file_async');
-const DATABASE = procces.argv[2];
+const DATABASE = process.argv[2];
 
 const app = http.createServer(async (request, response) => {
   response.writeHead(200, { 'Content-Type': 'text/plain' });
