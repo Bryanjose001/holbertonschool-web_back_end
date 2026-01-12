@@ -14,9 +14,9 @@ app.get('/', (request, response) => {
 app.get('/students', async (request, response) => {
   try {
     const dataResult = await countStudents(DATABASE);
-    response.status(200).send('This is the list of our students\n' + dataResult,);
+    response.status(200).send(`This is the list of our students\n${dataResult}`);
   } catch (error) {
-    response.status(200).send('This is the list of our students\n' + error.message,);
+    response.status(200).send(`This is the list of our students\n${error.message}`);
   }
 });
 
