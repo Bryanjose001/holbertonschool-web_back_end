@@ -12,13 +12,11 @@ app.get('/', (request, response) => {
 });
 
 app.get('/students', async (request, response) => {
-  response.write('This is the list of our students\n');
-
   try {
-    const dataResult =await countStudents(DATABASE);
-    response.status(200).send(dataResult)
+    const dataResult = await countStudents(DATABASE);
+    response.status(200).send('This is the list of our students\n' + dataResult,);
   } catch (error) {
-    response.status(200).send(error.message);
+    response.status(200).send('This is the list of our students\n' + error.message,);
   }
 });
 
